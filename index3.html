@@ -5,6 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Engineering Portfolio</title>
     <style>
+        :root {
+            --bg-primary: #fafafa;
+            --bg-secondary: white;
+            --bg-tertiary: #f5f5f5;
+            --text-primary: #222;
+            --text-secondary: #333;
+            --text-tertiary: #666;
+            --text-muted: #888;
+            --border-color: #e0e0e0;
+            --tag-bg: #f0f0f0;
+            --tag-text: #555;
+            --link-color: #0066cc;
+            --link-hover: #004999;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-primary: #1a1a1a;
+                --bg-secondary: #2d2d2d;
+                --bg-tertiary: #3a3a3a;
+                --text-primary: #e4e4e4;
+                --text-secondary: #d0d0d0;
+                --text-tertiary: #a8a8a8;
+                --text-muted: #888888;
+                --border-color: #4a4a4a;
+                --tag-bg: #404040;
+                --tag-text: #b0b0b0;
+                --link-color: #5ba3ff;
+                --link-hover: #7bb8ff;
+            }
+        }
+
+        [data-theme="dark"] {
+            --bg-primary: #1a1a1a;
+            --bg-secondary: #2d2d2d;
+            --bg-tertiary: #3a3a3a;
+            --text-primary: #e4e4e4;
+            --text-secondary: #d0d0d0;
+            --text-tertiary: #a8a8a8;
+            --text-muted: #888888;
+            --border-color: #4a4a4a;
+            --tag-bg: #404040;
+            --tag-text: #b0b0b0;
+            --link-color: #5ba3ff;
+            --link-hover: #7bb8ff;
+        }
+
+        html.dark-mode {
+            --bg-primary: #1a1a1a;
+            --bg-secondary: #2d2d2d;
+            --bg-tertiary: #3a3a3a;
+            --text-primary: #e4e4e4;
+            --text-secondary: #d0d0d0;
+            --text-tertiary: #a8a8a8;
+            --text-muted: #888888;
+            --border-color: #4a4a4a;
+            --tag-bg: #404040;
+            --tag-text: #b0b0b0;
+            --link-color: #5ba3ff;
+            --link-hover: #7bb8ff;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -14,23 +76,32 @@
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
             line-height: 1.6;
-            color: #222;
-            background: #fafafa;
+            color: var(--text-primary);
+            background: var(--bg-primary);
             padding: 40px 20px;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
 
         .container {
             max-width: 800px;
             margin: 0 auto;
-            background: white;
+            background: var(--bg-secondary);
             padding: 50px;
-            border: 1px solid #e0e0e0;
+            border: 1px solid var(--border-color);
         }
 
         header {
             margin-bottom: 60px;
-            border-bottom: 2px solid #222;
+            border-bottom: 2px solid var(--text-primary);
             padding-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .header-content {
+            flex: 1;
         }
 
         h1 {
@@ -42,8 +113,31 @@
 
         .tagline {
             font-size: 16px;
-            color: #666;
+            color: var(--text-tertiary);
             line-height: 1.5;
+        }
+
+        .theme-toggle {
+            background: var(--tag-bg);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            padding: 8px 14px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 13px;
+            white-space: nowrap;
+            transition: all 0.2s ease;
+            font-weight: 500;
+            flex-shrink: 0;
+        }
+
+        .theme-toggle:hover {
+            background: var(--border-color);
+            opacity: 0.8;
+        }
+
+        .theme-toggle:active {
+            transform: scale(0.98);
         }
 
         .projects {
@@ -53,7 +147,7 @@
         }
 
         .project {
-            border-left: 3px solid #222;
+            border-left: 3px solid var(--text-primary);
             padding-left: 24px;
         }
 
@@ -65,7 +159,7 @@
 
         .project-meta {
             font-size: 13px;
-            color: #888;
+            color: var(--text-muted);
             text-transform: uppercase;
             letter-spacing: 0.5px;
             margin-bottom: 16px;
@@ -75,7 +169,7 @@
             font-size: 15px;
             margin-bottom: 16px;
             line-height: 1.7;
-            color: #333;
+            color: var(--text-secondary);
         }
 
         .tech-stack {
@@ -88,10 +182,10 @@
         .tech-tag {
             display: inline-block;
             font-size: 12px;
-            background: #f0f0f0;
+            background: var(--tag-bg);
             padding: 4px 10px;
-            border: 1px solid #ddd;
-            color: #555;
+            border: 1px solid var(--border-color);
+            color: var(--tag-text);
         }
 
         .project-images {
@@ -101,12 +195,9 @@
             gap: 24px;
         }
 
-
-
-
         .project-image {
-            background: #f5f5f5;
-            border: 1px solid #e0e0e0;
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border-color);
             padding: 0;
             overflow: hidden;
             border-radius: 4px;
@@ -123,10 +214,10 @@
 
         .project-image figcaption {
             font-size: 13px;
-            color: #555;
+            color: var(--text-tertiary);
             padding: 12px 16px;
-            background: #fafafa;
-            border-top: 1px solid #e0e0e0;
+            background: var(--bg-primary);
+            border-top: 1px solid var(--border-color);
             text-align: center;
             font-style: italic;
         }
@@ -139,30 +230,100 @@
         }
 
         .project-link a {
-            color: #0066cc;
+            color: var(--link-color);
             text-decoration: none;
-            border-bottom: 1px solid #0066cc;
+            border-bottom: 1px solid var(--link-color);
         }
 
         .project-link a:hover {
-            color: #004999;
+            color: var(--link-hover);
         }
 
-        @media (max-width: 600px) {
+        @media (max-width: 768px) {
             .container {
                 padding: 30px 20px;
             }
 
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .theme-toggle {
+                align-self: flex-start;
+            }
+
             h1 {
-                font-size: 24px;
+                font-size: 28px;
             }
 
             .project h2 {
                 font-size: 18px;
             }
 
+            .project {
+                padding-left: 16px;
+            }
+
             .project-images {
                 grid-template-columns: 1fr;
+            }
+
+            .project-image img {
+                height: 200px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 20px 16px;
+            }
+
+            .container {
+                padding: 20px 16px;
+            }
+
+            h1 {
+                font-size: 24px;
+                margin-bottom: 8px;
+            }
+
+            .tagline {
+                font-size: 14px;
+            }
+
+            .project {
+                border-left-width: 2px;
+                padding-left: 12px;
+            }
+
+            .project h2 {
+                font-size: 16px;
+            }
+
+            .project-meta {
+                font-size: 12px;
+            }
+
+            .project-description {
+                font-size: 14px;
+            }
+
+            .project-images {
+                gap: 16px;
+            }
+
+            .project-image img {
+                height: 180px;
+            }
+
+            .tech-stack {
+                gap: 6px;
+            }
+
+            .tech-tag {
+                font-size: 11px;
+                padding: 3px 8px;
             }
         }
     </style>
@@ -170,8 +331,11 @@
 <body>
     <div class="container">
         <header>
-            <h1>A summary of some projects I've completed over the last few years</h1>
-            <p class="tagline">This is just a longerwinded, more casual explaination of some of the project I've worked on. These have been a lot of work and cover a wide range of topics in engineering and research. I'm always excited to share what I've been working on so feel free to reach out to me to ask questions or get to know more. </p>
+            <div class="header-content">
+                <h1>A summary of some projects I've completed over the last few years</h1>
+                <p class="tagline">This is just a longerwinded, more casual explaination of some of the project I've worked on. These have been a lot of work and cover a wide range of topics in engineering and research. I'm always excited to share what I've been working on so feel free to reach out to me to ask questions or get to know more. </p>
+            </div>
+            <button class="theme-toggle" id="themeToggle">Dark Mode</button>
         </header>
 
         <div class="projects">
@@ -226,8 +390,8 @@
 
                 <div class="project-images">
                     <figure class="project-image">
-                        <img src="images/robot_labspace.jpg" alt="Robot Labspace">
-                        <figcaption>This is an image of the robotic workcell in the new labspace which includes 3 robotic AM systems capable of material extrusion, DED-Arc, large format pellet extrusion and Direct Ink Write AM. </figcaption>
+                        <img src="images/none.jpg" alt="Robot Labspace">
+                        <figcaption>Riggeres moving 3 robts, 1 welder, and 1 CNC machine into the new lab space</figcaption>
                     </figure>
                     <figure class="project-image">
                         <img src="images/warroom.JPG" alt="During the planning and layout stages, we made CAD models of all the equiptment and their footprint, to scale and literally laid them out and pushed around all the models to decide how the equiptment would fit in the new labspace. ">
@@ -583,6 +747,44 @@
     </div>
 
     <script>
+    // Dark mode toggle - robust version
+    window.addEventListener('DOMContentLoaded', function() {
+        const themeToggle = document.getElementById('themeToggle');
+        const root = document.documentElement;
+
+        if (!themeToggle) {
+            console.warn('Theme toggle not found');
+            return;
+        }
+
+        // Initialize based on saved preference or system preference
+        const saved = localStorage.getItem('darkMode');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        
+        let isDarkMode = saved !== null ? saved === 'true' : prefersDark;
+        
+        function applyTheme(dark) {
+            if (dark) {
+                root.setAttribute('data-theme', 'dark');
+                themeToggle.textContent = 'Light Mode';
+            } else {
+                root.setAttribute('data-theme', 'light');
+                themeToggle.textContent = 'Dark Mode';
+            }
+            isDarkMode = dark;
+            localStorage.setItem('darkMode', dark);
+        }
+
+        // Apply initial theme
+        applyTheme(isDarkMode);
+
+        // Handle clicks
+        themeToggle.onclick = function(e) {
+            e.preventDefault();
+            applyTheme(!isDarkMode);
+        };
+    });
+
     // Simple image lightbox
     document.querySelectorAll('.project-image img').forEach(img => {
         img.style.cursor = 'pointer';
