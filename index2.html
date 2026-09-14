@@ -5,53 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Engineering Portfolio</title>
     <style>
-        :root {
-            --bg-primary: #fafafa;
-            --bg-secondary: white;
-            --bg-tertiary: #f5f5f5;
-            --text-primary: #222;
-            --text-secondary: #333;
-            --text-tertiary: #666;
-            --text-muted: #888;
-            --border-color: #e0e0e0;
-            --tag-bg: #f0f0f0;
-            --tag-text: #555;
-            --link-color: #0066cc;
-            --link-hover: #004999;
-        }
-
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --bg-primary: #1a1a1a;
-                --bg-secondary: #2d2d2d;
-                --bg-tertiary: #3a3a3a;
-                --text-primary: #e4e4e4;
-                --text-secondary: #d0d0d0;
-                --text-tertiary: #a8a8a8;
-                --text-muted: #888888;
-                --border-color: #4a4a4a;
-                --tag-bg: #404040;
-                --tag-text: #b0b0b0;
-                --link-color: #5ba3ff;
-                --link-hover: #7bb8ff;
-            }
-        }
-
-        html.dark-mode {
-            --bg-primary: #1a1a1a;
-            --bg-secondary: #2d2d2d;
-            --bg-tertiary: #3a3a3a;
-            --text-primary: #e4e4e4;
-            --text-secondary: #d0d0d0;
-            --text-tertiary: #a8a8a8;
-            --text-muted: #888888;
-            --border-color: #4a4a4a;
-            --tag-bg: #404040;
-            --tag-text: #b0b0b0;
-            --link-color: #5ba3ff;
-            --link-hover: #7bb8ff;
-        }
-
         * {
             margin: 0;
             padding: 0;
@@ -61,32 +14,23 @@
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
             line-height: 1.6;
-            color: var(--text-primary);
-            background: var(--bg-primary);
+            color: #222;
+            background: #fafafa;
             padding: 40px 20px;
-            transition: background-color 0.3s ease, color 0.3s ease;
         }
 
         .container {
             max-width: 800px;
             margin: 0 auto;
-            background: var(--bg-secondary);
+            background: white;
             padding: 50px;
-            border: 1px solid var(--border-color);
+            border: 1px solid #e0e0e0;
         }
 
         header {
             margin-bottom: 60px;
-            border-bottom: 2px solid var(--text-primary);
+            border-bottom: 2px solid #222;
             padding-bottom: 30px;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            gap: 20px;
-        }
-
-        .header-content {
-            flex: 1;
         }
 
         h1 {
@@ -98,25 +42,8 @@
 
         .tagline {
             font-size: 16px;
-            color: var(--text-tertiary);
+            color: #666;
             line-height: 1.5;
-        }
-
-        .theme-toggle {
-            background: none;
-            border: 1px solid var(--border-color);
-            color: var(--text-primary);
-            padding: 8px 12px;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 13px;
-            white-space: nowrap;
-            transition: background-color 0.2s ease;
-            font-weight: 500;
-        }
-
-        .theme-toggle:hover {
-            background: var(--tag-bg);
         }
 
         .projects {
@@ -126,7 +53,7 @@
         }
 
         .project {
-            border-left: 3px solid var(--text-primary);
+            border-left: 3px solid #222;
             padding-left: 24px;
         }
 
@@ -138,7 +65,7 @@
 
         .project-meta {
             font-size: 13px;
-            color: var(--text-muted);
+            color: #888;
             text-transform: uppercase;
             letter-spacing: 0.5px;
             margin-bottom: 16px;
@@ -148,7 +75,7 @@
             font-size: 15px;
             margin-bottom: 16px;
             line-height: 1.7;
-            color: var(--text-secondary);
+            color: #333;
         }
 
         .tech-stack {
@@ -161,10 +88,10 @@
         .tech-tag {
             display: inline-block;
             font-size: 12px;
-            background: var(--tag-bg);
+            background: #f0f0f0;
             padding: 4px 10px;
-            border: 1px solid var(--border-color);
-            color: var(--tag-text);
+            border: 1px solid #ddd;
+            color: #555;
         }
 
         .project-images {
@@ -174,9 +101,12 @@
             gap: 24px;
         }
 
+
+
+
         .project-image {
-            background: var(--bg-tertiary);
-            border: 1px solid var(--border-color);
+            background: #f5f5f5;
+            border: 1px solid #e0e0e0;
             padding: 0;
             overflow: hidden;
             border-radius: 4px;
@@ -193,10 +123,10 @@
 
         .project-image figcaption {
             font-size: 13px;
-            color: var(--text-tertiary);
+            color: #555;
             padding: 12px 16px;
-            background: var(--bg-primary);
-            border-top: 1px solid var(--border-color);
+            background: #fafafa;
+            border-top: 1px solid #e0e0e0;
             text-align: center;
             font-style: italic;
         }
@@ -209,100 +139,30 @@
         }
 
         .project-link a {
-            color: var(--link-color);
+            color: #0066cc;
             text-decoration: none;
-            border-bottom: 1px solid var(--link-color);
+            border-bottom: 1px solid #0066cc;
         }
 
         .project-link a:hover {
-            color: var(--link-hover);
+            color: #004999;
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 600px) {
             .container {
                 padding: 30px 20px;
             }
 
-            header {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .theme-toggle {
-                align-self: flex-start;
-            }
-
             h1 {
-                font-size: 28px;
+                font-size: 24px;
             }
 
             .project h2 {
                 font-size: 18px;
             }
 
-            .project {
-                padding-left: 16px;
-            }
-
             .project-images {
                 grid-template-columns: 1fr;
-            }
-
-            .project-image img {
-                height: 200px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            body {
-                padding: 20px 16px;
-            }
-
-            .container {
-                padding: 20px 16px;
-            }
-
-            h1 {
-                font-size: 24px;
-                margin-bottom: 8px;
-            }
-
-            .tagline {
-                font-size: 14px;
-            }
-
-            .project {
-                border-left-width: 2px;
-                padding-left: 12px;
-            }
-
-            .project h2 {
-                font-size: 16px;
-            }
-
-            .project-meta {
-                font-size: 12px;
-            }
-
-            .project-description {
-                font-size: 14px;
-            }
-
-            .project-images {
-                gap: 16px;
-            }
-
-            .project-image img {
-                height: 180px;
-            }
-
-            .tech-stack {
-                gap: 6px;
-            }
-
-            .tech-tag {
-                font-size: 11px;
-                padding: 3px 8px;
             }
         }
     </style>
@@ -310,11 +170,8 @@
 <body>
     <div class="container">
         <header>
-            <div class="header-content">
-                <h1>A summary of some projects I've completed over the last few years</h1>
-                <p class="tagline">This is just a longerwinded, more casual explaination of some of the project I've worked on. These have been a lot of work and cover a wide range of topics in engineering and research. I'm always excited to share what I've been working on so feel free to reach out to me to ask questions or get to know more. </p>
-            </div>
-            <button class="theme-toggle" id="themeToggle">Dark Mode</button>
+            <h1>A summary of some projects I've completed over the last few years</h1>
+            <p class="tagline">This is just a longerwinded, more casual explaination of some of the project I've worked on. These have been a lot of work and cover a wide range of topics in engineering and research. I'm always excited to share what I've been working on so feel free to reach out to me to ask questions or get to know more. </p>
         </header>
 
         <div class="projects">
@@ -726,44 +583,6 @@
     </div>
 
     <script>
-    // Dark mode toggle
-    const themeToggle = document.getElementById('themeToggle');
-    const htmlElement = document.documentElement;
-
-    // Check for saved theme preference or system preference
-    const savedTheme = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-        htmlElement.classList.add('dark-mode');
-        themeToggle.textContent = 'Light Mode';
-    }
-
-    themeToggle.addEventListener('click', () => {
-        if (htmlElement.classList.contains('dark-mode')) {
-            htmlElement.classList.remove('dark-mode');
-            localStorage.setItem('theme', 'light');
-            themeToggle.textContent = 'Dark Mode';
-        } else {
-            htmlElement.classList.add('dark-mode');
-            localStorage.setItem('theme', 'dark');
-            themeToggle.textContent = 'Light Mode';
-        }
-    });
-
-    // Listen for system theme changes
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-        if (!localStorage.getItem('theme')) {
-            if (e.matches) {
-                htmlElement.classList.add('dark-mode');
-                themeToggle.textContent = 'Light Mode';
-            } else {
-                htmlElement.classList.remove('dark-mode');
-                themeToggle.textContent = 'Dark Mode';
-            }
-        }
-    });
-
     // Simple image lightbox
     document.querySelectorAll('.project-image img').forEach(img => {
         img.style.cursor = 'pointer';
