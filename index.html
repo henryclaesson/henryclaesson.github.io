@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            line-height: 1.6;
+            color: #222;
+            background: #fafafa;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 50px;
+            border: 1px solid #e0e0e0;
+        }
+
+        header {
+            margin-bottom: 60px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+        }
+
+        .tagline {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        .projects {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+        }
+
+        .project {
+            border-left: 3px solid #222;
+            padding-left: 24px;
+        }
+
+        .project h2 {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .project-meta {
+            font-size: 13px;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 16px;
+        }
+
+        .project-description {
+            font-size: 15px;
+            margin-bottom: 16px;
+            line-height: 1.7;
+            color: #333;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+
+        .tech-tag {
+            display: inline-block;
+            font-size: 12px;
+            background: #f0f0f0;
+            padding: 4px 10px;
+            border: 1px solid #ddd;
+            color: #555;
+        }
+
+        .project-images {
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+        }
+
+        .project-image {
+            background: #f5f5f5;
+            border: 1px solid #e0e0e0;
+            aspect-ratio: 4/3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 13px;
+            text-align: center;
+            padding: 16px;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .project-link {
+            font-size: 13px;
+            margin-top: 16px;
+        }
+
+        .project-link a {
+            color: #0066cc;
+            text-decoration: none;
+            border-bottom: 1px solid #0066cc;
+        }
+
+        .project-link a:hover {
+            color: #004999;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .project h2 {
+                font-size: 18px;
+            }
+
+            .project-images {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Engineering Projects</h1>
+            <p class="tagline">A collection of work spanning additive manufacturing systems, mechanical design, robotics integration, and research infrastructure.</p>
+        </header>
+
+        <div class="projects">
+
+            <!-- PROJECT: Lab Consolidation and Relocation -->
+            <div class="project">
+                <h2>Lab Consolidation and Relocation</h2>
+                <div class="project-meta">2022–2024 | DREAMS Lab, Virginia Tech</div>
+                
+                <p class="project-description">
+                    In 2022, Virginia Tech's mechanical engineering department got new leadership, and one of their first priorities was consolidating our research back to campus. At the time, the DREAMS Lab—where I do all my additive manufacturing systems research—was scattered across seven different facilities around Blacksburg. We had equipment everywhere: metal 3D printers in one spot, polymer systems in another, the CNC machines in a third building, welders somewhere else, and so on. It was logistically inefficient and frankly made it hard to run cohesive research. When the new department head made it clear they wanted everything under one roof, I got tasked with making it happen. I became the point of contact between the lab, a construction company, and Virginia Tech's facilities team.
+                </p>
+
+                <p class="project-description">
+                    The scope was massive. We were moving 43 pieces of equipment total—I'm talking high-powered welders, multiple CNC machines, industrial-scale polymer and metal powder AM systems, desktop 3D printers, three robotic arms, specialized materials prep labs, friction stir welding equipment, and this anechoic chamber that had its own dedicated HVAC and fire suppression system. Basically everything you'd need to run an advanced manufacturing lab. The challenges came fast. First, the building we were consolidating into didn't have enough electrical service for all this equipment. We had to coordinate with the university to install new transformers and additional power panels to pull more power into the building—and this wasn't a quick process. Second, every single piece of equipment had different electrical requirements, different utility hookups, different cooling or air compression needs. There was no one-size-fits-all solution.
+                </p>
+
+                <p class="project-description">
+                    I ended up spending a lot of time coordinating with the facilities team on the building-wide air compression system—something that would serve not just our lab but all the labs in the building. I worked with riggers to safely move multi-ton pieces of equipment, managed the precision leveling and bolting of machines to the floor so they wouldn't drift during operation, dealt with the complexity of removing that anechoic chamber without breaking its specialized systems, and made sure we hit every EHS and safety requirement along the way. There were weekly coordination meetings, unexpected problems with utility routing, and a lot of back-and-forth about spatial constraints.
+                </p>
+
+                <p class="project-description">
+                    What I'm proud of beyond just "we moved the equipment" is how we actually designed the new space. I ran workshops with our graduate students to think through the ideal layout for our equipment given the constraints we had. We had to puzzle out how to arrange metal AM systems near material prep, how to position the robots and welders for safety and workflow, where to put CNC machines to minimize noise impact on other labs, and how to make sure everything fit in the room we had. It wasn't trivial—you can't just plop 43 pieces of equipment anywhere and hope it works. Over the course of two years, we solved every problem and successfully moved the entire lab without losing a single piece of equipment or compromising safety. The new consolidated facility is far better for collaboration, equipment utilization, and frankly, for running the research we want to run.
+                </p>
+
+                <div class="tech-stack">
+                    <span class="tech-tag">Project Management</span>
+                    <span class="tech-tag">Electrical Infrastructure</span>
+                    <span class="tech-tag">Mechanical Systems</span>
+                    <span class="tech-tag">EHS Compliance</span>
+                    <span class="tech-tag">Stakeholder Coordination</span>
+                    <span class="tech-tag">Facility Design</span>
+                </div>
+
+                <div class="project-images">
+                    <div class="project-image">Before relocation</div>
+                    <div class="project-image">After relocation</div>
+                    <div class="project-image">Equipment rigging</div>
+                </div>
+
+                <p style="font-size: 13px; color: #888; margin-top: 12px;">
+                    <em>Replace image placeholders with actual photos of before/after facility, rigging operations, etc.</em>
+                </p>
+            </div>
+
+            <!-- PROJECT: Golf Club Measurement Rig -->
+            <div class="project">
+                <h2>Golf Club Impact Measurement Rig</h2>
+                <div class="project-meta">2021 | Virginia Tech</div>
+                
+                <p class="project-description">
+                    My advisor, Dr. Christopher B. Williams, teaches the additive manufacturing course every fall to over 70 students, and for years the final project has been a design-your-own challenge: pick a problem that can *only* be solved with additive manufacturing. When I took his class back in 2019, it was a really valuable learning experience, but I also watched him struggle to scope and manage 70+ different projects. A few of us students talked to him about changing the project structure, and we landed on something more focused: a golf club head design challenge.
+                </p>
+
+                <p class="project-description">
+                    The idea is elegant. With additive manufacturing, you can create complex internal geometries and shape features that traditional manufacturing just can't do. By carefully designing the geometry and controlling material properties through processing parameters, you can actually influence how the golf ball behaves when it impacts the clubface—things like the coefficient of restitution and energy transfer. So the final project became: design a golf club head using AM, and we'd test them to see how well each design performed.
+                </p>
+
+                <p class="project-description">
+                    My role was supposed to be simple: build a testing rig to measure the coefficient of restitution. That one sentence makes it sound straightforward. In practice, it was anything but. The rig got dropped on my lab ten days before the students needed to test their clubs as part of their final exam. And there was a fundamental problem I had to solve first: the students were designing 15+ different club heads, each with different mass, shape, and weight distribution. I couldn't just swing each club at a ball because I'd have to account for all that variation in mass and impact dynamics—it would be infeasible to isolate the design effects from the swing variation.
+                </p>
+
+                <p class="project-description">
+                    So I flipped the problem. Instead of swinging the club, I'd fixture the club in a consistent position and swing the ball. The club would stay the same every time—left-handed or right-handed, secured in a custom vice I designed. The ball would be launched with a repeatable swing mechanism each time. This way, the ball's mass and velocity stay constant, and I can isolate just how the club geometry affects the impact.
+                </p>
+
+                <p class="project-description">
+                    Building it under a ten-day deadline with limited budget meant getting creative. The base is made from scrap sheet metal we had lying around. The main structure is aluminum electrical conduit—we had stacks of it in the lab already—with some 3D-printed joinery to connect pieces. The bearing for the swinging arm came from an old RC car project, as did the accelerometer (an LIS3DH MEMS sensor). I modified the bearing mechanism and CNC'd half a dozen other parts to make it all work together. It was definitely a scrappy build, but it worked.
+                </p>
+
+                <p class="project-description">
+                    Now comes the hard part: actually measuring what happens during impact. Here's the thing about golf: when a club strikes a ball, they're only in contact for about 0.0001 to 0.0005 seconds. That's 100 to 500 microseconds. Over an entire 18-hole round, the ball probably touches the club for less than a second total. I had to measure a fraction of that contact time and capture the acceleration profile with enough fidelity to calculate coefficient of restitution.
+                </p>
+
+                <p class="project-description">
+                    I'd just finished my digital signal processing course, so I wanted to do this right. Using the Nyquist frequency theorem, to resolve 100-microsecond impacts, I needed to sample at over 1 megahertz. Straightforward on an oscilloscope—but the testing had to happen off-site, so the system needed to be portable. I couldn't bring lab equipment.
+                </p>
+
+                <p class="project-description">
+                    My first approach: use an Arduino with the Adafruit accelerometer breakout board. Standard stuff. But reading over SPI, the maximum sampling rate I could achieve was somewhere between 1 and 5 kHz. That's nowhere close to 1 MHz. At 5 kHz, my time resolution is 200 microseconds—useless for capturing a 100-microsecond impact. I was stuck.
+                </p>
+
+                <p class="project-description">
+                    Then I found a Teensy 4.1 in our parts bin. The datasheet said 600 MHz clock speed. Now *that* I could work with. I bypassed the nice SPI communication on the accelerometer board entirely and read directly from the raw analog output of the sensor into the Teensy's ADC. That got me to about 100 kHz—better, but still not enough.
+                </p>
+
+                <p class="project-description">
+                    I realized I was making some mistakes. The Teensy's ADC has 12-bit resolution—far more precision than I actually needed for measuring acceleration. By rounding more aggressively and cleaning up the code, I squeezed it up to 500 kHz. Halfway there. But to get the other half, I had to use direct memory access (DMA). Instead of the CPU reading the ADC and writing to RAM, I'd let the hardware DMA controller move that data directly from the ADC into system memory without CPU overhead. One less bottleneck.
+                </p>
+
+                <p class="project-description">
+                    With DMA enabled, I hit 1 MHz. Right where I needed to be. Now I could capture the acceleration profile of the ball impacting the golf club with a 1-microsecond time resolution, which was more than enough to resolve the transient dynamics and calculate coefficient of restitution from the before-and-after ball velocities.
+                </p>
+
+                <p class="project-description">
+                    The result: a portable, repeatable testing system that let us evaluate each student's golf club design and actually measure how well their AM design choices affected the impact characteristics. The rig got used for that year's final exam, and it worked. The whole thing—mechanical design, electronics, firmware, signal processing, fabrication—that's the kind of problem I actually enjoy solving.
+                </p>
+
+                <div class="tech-stack">
+                    <span class="tech-tag">Embedded Systems</span>
+                    <span class="tech-tag">Signal Processing</span>
+                    <span class="tech-tag">Mechanical Design</span>
+                    <span class="tech-tag">CNC Machining</span>
+                    <span class="tech-tag">3D Printing</span>
+                    <span class="tech-tag">Firmware Development</span>
+                    <span class="tech-tag">Instrumentation</span>
+                    <span class="tech-tag">Hardware Integration</span>
+                </div>
+
+                <div class="project-images">
+                    <div class="project-image">Testing rig assembly</div>
+                    <div class="project-image">Impact acceleration data</div>
+                    <div class="project-image">Design comparison results</div>
+                </div>
+
+                <p style="font-size: 13px; color: #888; margin-top: 12px;">
+                    <em>Replace image placeholders with photos of the rig and graphs showing coefficient of restitution data across designs.</em>
+                </p>
+            </div>
+
+            <!-- PROJECT: Fusion 360 CAM Plugin -->
+            <div class="project">
+                <h2>Fusion 360 Wire Arc DED Toolpath Plugin</h2>
+                <div class="project-meta">2022–Present | DREAMS Lab, Virginia Tech</div>
+                
+                <p class="project-description">
+                    One of the core research questions in my area—Wire Arc Directed Energy Deposition (DED-Arc)—is how the toolpath you program affects the thermal history during printing, which in turn affects the microstructure and mechanical properties of the finished part. Complex toolpaths create complex thermal cycles. Simple toolpaths (like a straight line or a weave pattern) are predictable and well-understood, but they limit what you can actually build. If I want to understand how a clever toolpath strategy can improve material properties, I need the ability to generate and test those complex toolpaths.
+                </p>
+
+                <p class="project-description">
+                    The software for this is out there. Mastercam's A-Plus, Siemens NX's additive extension, Powermill Ultimate—these are the industry standards for toolpath generation. They're also locked behind licenses that cost tens of thousands of dollars *per year*. For an academic lab on a research budget, that's just not realistic. So like any resourceful researcher, I started looking at what I actually had access to.
+                </p>
+
+                <p class="project-description">
+                    Autodesk gives students and faculty free access to Fusion 360 and its advanced plugins through education licenses. I was honestly surprised when I found out Fusion 360 included an advanced manufacturing extension with DED-Arc toolpath generation built in. This seemed like exactly what I needed. I spent some time learning how to use it, and it was actually pretty intuitive—I could design parts in Fusion, generate toolpaths, and be on my way.
+                </p>
+
+                <p class="project-description">
+                    Except... it didn't work. Not directly, anyway. The issue is that Fusion 360's manufacturing extension generates generic toolpaths in G-Code that follow a broad standard. But our machine—a DMS Hybrid Hero—isn't a generic CNC. It has its own machine-specific requirements, its own controller, its own dialect of G-Code. The generic output from Fusion couldn't be read by our machine. I could generate the perfect toolpath in software, but my machine wouldn't know what to do with it.
+                </p>
+
+                <p class="project-description">
+                    This is where I decided to dig myself deeper. I wrote a custom plugin for Fusion 360 that lets me input machine-specific parameters—things like our DMS Hybrid Hero's nozzle type, wire feed settings, travel parameters, all the details that make our machine unique. The plugin then passes this information to a custom post-processor I also wrote, which converts the generic Fusion toolpath data into G-Code that our specific machine can actually read and execute. It was like building a bridge between Fusion's generic output and our specific hardware.
+                </p>
+
+                <p class="project-description">
+                    But I wasn't quite done. As I started using the plugin to generate more complex toolpaths, I ran into another problem that commercial software solved years ago: toolpath ordering and collision avoidance. When you have a complex part with multiple operations—maybe multiple layers, different deposition patterns, different sections—you have to program them in the right order. Get the sequence wrong and your tool crashes into already-deposited material. With simple parts, you can do this manually. With complex geometry, it becomes a nightmare of manual trial-and-error.
+                </p>
+
+                <p class="project-description">
+                    The commercial CAM software solved this with a feature called Z-layer merge. It automatically looks at all your toolpath operations, understands their spatial relationships, and orders them in a way that avoids collisions. Powermill's had this for years. Fusion 360 has never added it. So I implemented it myself in my plugin. The algorithm looks at the Z-height of each operation, groups them intelligently, and reorders them to be safe. What would have taken hours of manual programming—or resulted in crashes and failed prints—now happens automatically.
+                </p>
+
+                <p class="project-description">
+                    This sounds like maybe a nice-to-have feature, but it's actually transformative. Before I built this, we were limited to simple toolpaths: weave patterns, linear deposits, basic geometries that were easy to sequence manually. Now I can generate and successfully print fully complex parts with arbitrary geometry. We can run them on our 3-axis system or push it to 8 degrees of freedom with our robotic arms. The research that I want to do—understanding how complex toolpaths create complex thermal histories and change material performance—is now actually possible.
+                </p>
+
+                <p class="project-description">
+                    What I'm proud of isn't just the plugin itself. It's the problem-solving approach: I found a real constraint (expensive software), found a creative alternative (free education license + existing tool), identified what was missing (machine-specific output + intelligent sequencing), and built exactly what was needed. It's the kind of work that doesn't exist in a paper or a patent, but it's enabled every experiment I've done in Wire Arc DED since.
+                </p>
+
+                <div class="tech-stack">
+                    <span class="tech-tag">CAM/CNC Programming</span>
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">Plugin Development</span>
+                    <span class="tech-tag">Post-Processing</span>
+                    <span class="tech-tag">G-Code</span>
+                    <span class="tech-tag">Manufacturing Systems</span>
+                    <span class="tech-tag">Algorithm Design</span>
+                    <span class="tech-tag">Fusion 360 API</span>
+                </div>
+
+                <div class="project-images">
+                    <div class="project-image">Fusion 360 interface screenshot</div>
+                    <div class="project-image">Generated toolpath visualization</div>
+                    <div class="project-image">Printed part example</div>
+                </div>
+
+                <p style="font-size: 13px; color: #888; margin-top: 12px;">
+                    <em>Replace image placeholders with Fusion 360 UI screenshots, toolpath visualizations, and photos of finished parts.</em>
+                </p>
+            </div>
+
+            <!-- PROJECT: WISE PARTS Embedded Sensor -->
+            <div class="project">
+                <h2>WISE PARTS: Embedded Structural Health Monitoring Sensor Package</h2>
+                <div class="project-meta">2021–2024 | DARPA-Funded Project, DREAMS Lab</div>
+                
+                <p class="project-description">
+                    This project came from a pretty ambitious idea: what if you could embed a complete sensor and electronics package directly inside a metal part *while it's being manufactured*? Not bolted on afterward. Not retrofitted. Literally embedded within the material during the printing process. That's the vision of WISE PARTS—Wireless Integrated Sensor for Embedded Structural Health Monitoring—a DARPA-funded effort I worked on alongside my advisor and lab collaborators.
+                </p>
+
+                <p class="project-description">
+                    The motivating application is straightforward. In aerospace, automotive, and critical infrastructure, people want to know if a metal part is damaged or degrading in service. Right now, you inspect parts manually, or you bolt sensors on the surface, or you just hope nothing breaks. WISE PARTS says: what if the part itself could sense damage in real time, from the inside? What if it could tell you when something is wrong without any external wiring?
+                </p>
+
+                <p class="project-description">
+                    The problem is that embedding electronics inside a metal part being manufactured is *hard*. We're talking about a process where temperatures exceed 300°C, there's mechanical stress from the surrounding material being laid down, the spatial envelope is incredibly tight (you can't make the sensor package much larger than a postage stamp or it interferes with the deposition tool), and everything has to survive being buried inside metal. You can't put a lithium-ion battery in there—it'll catch fire. You can't rely on traditional wireless communication—the metal surrounding the sensor acts like a Faraday cage, blocking all radio signals.
+                </p>
+
+                <p class="project-description">
+                    My role was designing the entire sensor package hardware: the circuit board architecture, component selection, signal conditioning, and power management. It required thinking across multiple disciplines simultaneously—thermal engineering, embedded systems, analog electronics, signal processing, and materials science. The design needed to satisfy four core operational needs: (1) detect damage in the host structure through strain or vibration signatures, (2) measure temperature accurately across a wide range, (3) communicate sensor data wirelessly, and (4) be completely self-powered.
+                </p>
+
+                <p class="project-description">
+                    Piezoelectric materials are the backbone of this whole system. A piezoelectric element—specifically a Macro-Fiber Composite (MFC) transducer—can do three things: it generates electrical charge when strained (strain sensing), it creates impedance shifts detectable electrically (damage detection via electromechanical impedance), and it converts electrical signals back into mechanical vibrations (actuation for communication). When the MFC is bonded to the host structure, these properties let you sense what's happening mechanically and also send data out of the part.
+                </p>
+
+                <p class="project-description">
+                    The communication strategy is the most novel part. Since radio won't work inside a metal part, we use mechanical waves instead. The MFC is driven with a frequency-modulated signal that travels through the solid metal as longitudinal mechanical waves—basically, tiny vibrations propagating through the structure. An external receiver (like a laser vibrometer pointed at the surface) can pick up these vibrations and decode the data. It's completely wireless, completely encapsulated, and it doesn't require any wiring.
+                </p>
+
+                <p class="project-description">
+                    The hardware architecture is organized around six functional blocks. First, a logic and control block using a Texas Instruments microcontroller—I had to select a chip that was ultra-compact (important for our 1cm³ envelope), ultra-low power (critical for energy harvesting), and capable of managing timing-critical signal generation. I chose the MCPM0C1104 MCU, small enough to fit but powerful enough to run the firmware for multi-modal sensing.
+                </p>
+
+                <p class="project-description">
+                    Second, a temperature sensing block using a tiny thermistor in a voltage-divider configuration, with a lowpass filter to remove high-frequency noise. The design had to achieve ±2°C accuracy across −40 to 120°C, and I selected a specific thermistor (Vishay NTCS0402E3104FHT) in a 0201 package because it was small enough and accurate enough for our needs.
+                </p>
+
+                <p class="project-description">
+                    Third, a charge amplifier for strain sensing. The MFC generates charge proportional to strain, but the MCU can only measure voltage. So I implemented a charge-to-voltage converter using a high-impedance operational amplifier (Microchip MCP6L01) with a 250 MΩ feedback resistor. This circuit is incredibly sensitive—high feedback resistors and pA-level input bias currents—which means component selection and circuit board layout have to be meticulous.
+                </p>
+
+                <p class="project-description">
+                    Fourth, the vibrational communication block. This uses a direct digital synthesis IC (Analog Devices AD9833) to generate frequency-modulated signals that drive the MFC. The MCU controls the frequency through SPI, allowing it to modulate data onto the mechanical waves. I chose frequency modulation specifically because it's robust to attenuation and amplitude variations—the metal structure attenuates and filters the signal unpredictably, so relying on amplitude would be unreliable. Frequency changes remain detectable even after lots of filtering.
+                </p>
+
+                <p class="project-description">
+                    Fifth, a mode-switching block. Here's a problem: the MFC can sense *or* transmit, but not simultaneously without extremely complex circuitry that wouldn't fit. So I implemented a logic-controlled analog switch that toggles between sensing mode and communication mode. But the MFC can generate up to 50V under high mechanical strain, and my analog switch is only rated for 6.5V. The trick is to not switch the MFC signal itself—instead, switch the power rails to the downstream blocks. When sensing is active, power goes to the charge amplifier. When communicating, power goes to the frequency modulator. This keeps all voltages safe while achieving mode switching in minimal space.
+                </p>
+
+                <p class="project-description">
+                    Sixth, the energy harvesting and power management architecture. Lithium batteries don't survive 300°C, so I switched to supercapacitor storage—a 10F supercapacitor can handle the thermal stress and stores enough energy to power the system for sensing and communication cycles. The energy harvesting circuit uses the piezoelectric effect in reverse: ambient vibrations in the structure charge the supercapacitor. I selected an integrated energy management IC (AEM30940 EMIC) that handles cold-start boost conversion, maximum power point tracking, and regulated voltage distribution. The MCU and all sensing circuits run at 3.3V, derived from the supercapacitor through the EMIC's buck converter.
+                </p>
+
+                <p class="project-description">
+                    Every component in this design was selected through a systematic constraint-driven process. I had to consider thermal survival (will this survive 300°C? Is the package small enough? Can it withstand mechanical stress?). I had to think about electrical integration (does it play nicely with 3.3V power? Does it have the required signal bandwidth? Does the noise floor allow the measurements I need?). I had to manage power budgets (what's the quiescent current of each block? How long can the supercapacitor power a sensing cycle? How much energy can we harvest from vibration?).
+                </p>
+
+                <p class="project-description">
+                    What I'm proud of with this project isn't just that I designed a working circuit. It's that I solved multiple "second-level" problems that aren't obvious from the spec sheet. The MFC overvoltage problem. The charge amplifier leakage current drift. The frequency modulation choice for noisy mechanical channels. The supercapacitor-versus-battery trade-off. The architecture of power switching instead of signal switching. These aren't textbook solutions—they're the result of understanding constraints deeply and building solutions from first principles.
+                </p>
+
+                <p class="project-description">
+                    This project is still under active development, and because it's DARPA-funded, a lot of it isn't public. But it represents the kind of work I find most satisfying: hardware-constrained problem solving that requires you to think across multiple engineering domains simultaneously, understand the physics of your materials and processes, and make deliberate trade-offs in the face of competing requirements. That's the core of what I think makes a good engineer.
+                </p>
+
+                <div class="tech-stack">
+                    <span class="tech-tag">Embedded Systems Design</span>
+                    <span class="tech-tag">Analog Electronics</span>
+                    <span class="tech-tag">Microcontroller Firmware</span>
+                    <span class="tech-tag">Signal Conditioning</span>
+                    <span class="tech-tag">Power Management</span>
+                    <span class="tech-tag">Piezoelectric Systems</span>
+                    <span class="tech-tag">Energy Harvesting</span>
+                    <span class="tech-tag">PCB Design</span>
+                    <span class="tech-tag">Thermal Analysis</span>
+                </div>
+
+                <div class="project-images">
+                    <div class="project-image">PCB schematic overview</div>
+                    <div class="project-image">Fabricated sensor package</div>
+                    <div class="project-image">Communication signal waveform</div>
+                </div>
+
+                <p style="font-size: 13px; color: #888; margin-top: 12px;">
+                    <em>Replace image placeholders with photos of the sensor PCB, the embedded package in a test specimen, and oscilloscope captures of the vibrational communication signals.</em>
+                </p>
+            </div>
+
+            <!--
+
+        </div>
+    </div>
+</body>
+</html>
